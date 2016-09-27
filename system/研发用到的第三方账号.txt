@@ -1,0 +1,84 @@
+百度网站统计：
+账号：VIP趣新
+密码：FFun2016
+
+百度移动统计 13917353717  junstand1221 
+友盟	limengfei@meiguoyouxian.com	You2015
+
+IOS
+南京优阳企业版账号：pd@meiguoyouxian.com   密码：Youxieren2015
+刘凯杰个人版账号： ios@youxieren.com      密码：Youxieren2015
+
+趣新新申请的账号ios开发
+企业版开发者账号
+iOS@myffun.com
+Quxinios2016
+密保
+Paul Jobs0
+Paul Jobs1
+Paul Jobs2
+
+
+公司版:dev@myffun.com
+密码:Quxindev2016 
+密保:what is your dream job?
+     quxinshanghai1
+what was the first name of your first boss
+    quxinshanghai2
+what is the last name of your favorite elementary school teacher
+    quxinshanghai3
+
+
+短信
+13916318387	Youxieren2015	http://www.1xinxi.cn
+
+
+优阳的微信支付商户帐号
+1242896402@1242896402     Meiguo2015
+
+趣新微信支付
+pd@myffun.com  freshfun2016
+商户账号  1335619501@1335619501   290804
+appid： wx667c9cd468801536
+
+趣新支付宝
+pd@myffun.com  FreshFun2016
+密保：刘凯杰，于守华
+支付密码  liukaijie2016
+
+阿里云	pd@youxieren.com	密码freshfun123	http://www.aliyun.com/
+
+
+趣新备案   pd@myffun.com     yuexuan2016   阿里云备案
+
+域名   hi35671887@aliyun.com    12QWEasd  
+
+公司内部GITdenghaichao  /   you12345
+
+服务器 banana:ssh root@banana.meiguoyouxian.com     /   Meiguoyouxian2015
+
+服务器 orange:ssh root@orange.meiguoyouxian.com   /   Meiguoyouxian2015
+
+测试服务器   freshfun  120.27.241.225      FreshFun2016
+
+
+新买服务器   freshfun1      ssh root@118.178.59.147     Freshfun123            freshfun2     ssh root@118.178.84.29       Freshfun123
+	   freshfun3     ssh root@118.178.87.165      Freshfun123	
+
+数据库地址：rm-bp1m3fn0kvm8fjzkb.mysql.rds.aliyuncs.com   端口3306     
+         用户名：freshfun   密码：FreshFun2016
+ 线下数据库
+主 118.178.59.147
+
+从 118.178.84.29
+账号：root
+密码：FreshFun~2016
+
+服务号  FreshFun悦选
+eli.shan@myffun.com  / wozaizheli2016
+订阅号  悦选美食
+yuri.shan@myffun.com / wozaizheli2016
+微信开放平台
+wxpay@youxieren.com  / Youxieren2015
+
+阿里云管理终端密码   201609
