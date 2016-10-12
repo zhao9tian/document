@@ -90,3 +90,6 @@ git地址 ：http://git.fresh.fun/
 
 //公司的QQ号
 3383942150  freshfun2016
+
+jenkins账户密码
+admin Freshfun123
