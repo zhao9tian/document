@@ -19,8 +19,9 @@
           }],
           selectionList ：[{				// 精选列表
              	goodsId : '123',  // 商品编号
-        		goodsName : '饼干',  //商品名称
+        		goodsName : '少女心桃红起泡酒',  //商品名称
         		goodsImg : 'image/778899.png',  // 商品图片地址
+        		goodsDesc : '给自己一个浪漫的起泡酒',	//商品描述
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
           }],
@@ -34,13 +35,6 @@
         			shopMoney : 28.00,  // 商品实际销售价格
         			marketMoney : 42.00,  //参考价格
       			}]
-           }],
-           goodsList ：[{					// 商品列表
-             	goodsId : '123',  // 商品编号
-        		goodsName : '饼干',  //商品名称
-        		goodsImg : 'image/778899.png',  // 商品图片地址
-        		shopMoney : 28.00,  // 商品实际销售价格
-        		marketMoney : 42.00,  //参考价格
            }]
   		}
 ```
@@ -48,7 +42,7 @@
 2	接口名：/getAlcoholType.do	酒水列表
 
 ```
-入参 ：107
+入参 ：107 - 酒水对应的编号	page - 当前页码	pageSize - 显示数量
 出参：status: {
     	code: 1001,  //所有的成功都是1001
     	msg: "成功"
@@ -58,6 +52,7 @@
          	goodsList : [{
         		goodsId : '123',  // 商品编号
         		goodsName : '饼干',  //商品名称
+        		goodsDesc : '特级饼干',		//商品详细描述
         		goodsImg : 'image/778899.png',  // 商品图片地址
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
@@ -68,7 +63,7 @@
 3	接口名：/getSnacksType.do	零食列表
 
 ```
-  入参 ：106
+  入参 ：106 - 零食对应的编号		page	pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
     	msg: "成功"
@@ -78,6 +73,7 @@
          	goodsList : [{
         		goodsId : '123',  // 商品编号
         		goodsName : '饼干',  //商品名称
+        		goodsDesc : '特级饼干',		//商品详细描述		
         		goodsImg : 'image/778899.png',  // 商品图片地址
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
@@ -88,7 +84,7 @@
 4	接口名：/getSugarType.do	糖巧列表
 
 ```
-  入参 ：103
+  入参 ：103 - 糖巧对应的编号		page 	pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
     	msg: "成功"
@@ -98,6 +94,7 @@
       		goodsList : [{
         		goodsId : '123',  // 商品编号
         		goodsName : '饼干',  //商品名称
+        		goodsDesc : '特级饼干',		//商品详细描述
         		goodsImg : 'image/778899.png',  // 商品图片地址
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
@@ -105,10 +102,28 @@
   	}
 ```
 
+5	接口名：/getGoodsList.do		//推荐商品列表
+
+```
+  入参 ：page - 当前页码	pageSize - 每页显示商品的数量
+  出参 ：status: {
+    	code: 1001,  //所有的成功都是1001
+    	msg: "成功"
+  		},
+  		data : [{
+          	goodsId : '123',  // 商品编号
+        	goodsName : '饼干',  //商品名称
+        	goodsDesc : '特级饼干',		//商品详细描述
+        	goodsImg : 'image/778899.png',  // 商品图片地址
+        	shopMoney : 28.00,  // 商品实际销售价格
+        	marketMoney : 42.00,  //参考价格
+  		}]
+```
+
 6	接口名：/getTeaType.do	茶饮列表
 
 ```
-  入参 ：101
+  入参 ：101 - 对应茶饮编号	page - 当前页码	 pageSize - 页码显示的数量
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
     	msg: "成功"
@@ -118,6 +133,7 @@
       		goodsList : [{
         		goodsId : '123',  // 商品编号
         		goodsName : '饼干',  //商品名称
+        		goodsDesc : '特级饼干',		//商品详细描述
         		goodsImg : 'image/778899.png',  // 商品图片地址
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
@@ -128,7 +144,7 @@
 7	接口名：/getFreshType.do  生鲜列表
 
 ```
-  入参 ：108
+  入参 ：108 - 生鲜对应的编号		page	pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
     	msg: "成功"
@@ -138,6 +154,7 @@
       		goodsList : [{
         		goodsId : '123',  // 商品编号
         		goodsName : '饼干',  //商品名称
+        		goodsDesc : '特级饼干',		//商品详细描述
         		goodsImg : 'image/778899.png',  // 商品图片地址
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
@@ -148,7 +165,7 @@
 8	接口名：/getTablewareType.do 餐具列表
 
 ```
-  入参 ：105
+  入参 ：105 - 餐具对应编号		page		pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
     	msg: "成功"
@@ -158,6 +175,7 @@
       		goodsList : [{
         		goodsId : '123',  // 商品编号
         		goodsName : '饼干',  //商品名称
+        		goodsDesc : '特级饼干',			//商品详细描述
         		goodsImg : 'image/778899.png',  // 商品图片地址
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
@@ -168,7 +186,7 @@
 9	接口名：/getFastFoodType.do  速食列表
 
 ```
-  入参 ：104
+  入参 ：104 - 速食对应编号		page	pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
     	msg: "成功"
@@ -178,6 +196,7 @@
       		goodsList : [{
         		goodsId : '123',  // 商品编号
         		goodsName : '饼干',  //商品名称
+        		goodsDesc : "特级饼干",		//商品详细描述
         		goodsImg : 'image/778899.png',  // 商品图片地址
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
@@ -198,6 +217,7 @@
       		goodsList : [{		//商品列表
         		goodsId : '123',  // 商品编号
         		goodsName : '饼干',  //商品名称
+        		goodsDesc : "好吃",	//商品详细描述
         		goodsImg : 'image/778899.png',  // 商品图片地址
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
@@ -219,6 +239,7 @@
       			goodsRecomment : [{		//商品推荐
         			goodsId : '123', // 商品编号
         			goodsName : '饼干', //商品名称
+        			goodsDesc : "好吃",		//商品详细描述
         			goodsImg : 'image/778899.png', // 商品图片地址
         			shopMoney : 28.00, // 商品实际销售价格
         			marketMoney : 42.00, //参考价格
@@ -242,6 +263,7 @@
         			goodsId : '123',  // 商品编号
         			goodsName : '饼干',  //商品名称
         			goodsImg : 'image/778899.png',  // 商品图片地址
+        			goodsDesc : "好吃",			//商品详细描述
         			shopMoney : 28.00,  // 商品实际销售价格
         			marketMoney : 42.00,  //参考价格
       			}]
