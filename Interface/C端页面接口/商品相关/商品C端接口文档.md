@@ -28,6 +28,7 @@ method : get
         		marketMoney : 42.00,  //参考价格
           }],
            specialList ：[{				// 专题列表
+           		specialId : "2434",		//专题编号
              	specialInfoImg : "image/1234.png", //专题详情图片
       			specialDesc : "常常未了早上多睡会，只能赶时间....", //专题描述
      	 		goodsList : [{		//商品推荐
@@ -224,15 +225,17 @@ method : get
     	msg: "成功"
   		},
   		data : {
-      		specialImg : "image/234353242.png"	//专题图片
-      		goodsList : [{		//商品列表
-        		goodsId : '123',  // 商品编号
-        		goodsName : '饼干',  //商品名称
-        		goodsDesc : "好吃",	//商品详细描述
-        		goodsImg : 'image/778899.png',  // 商品图片地址
-        		shopMoney : 28.00,  // 商品实际销售价格
-        		marketMoney : 42.00,  //参考价格
-      		}]
+      		specialList ：[{				// 专题列表
+           		specialId : "2434",		//专题编号
+             	specialInfoImg : "image/1234.png", //专题详情图片
+     	 		goodsList : [{		//商品推荐
+        			goodsId : '123',  // 商品编号
+        			goodsName : '饼干',  //商品名称
+        			goodsImg : 'image/778899.png',  // 商品图片地址
+        			shopMoney : 28.00,  // 商品实际销售价格
+        			marketMoney : 42.00,  //参考价格
+      			}]
+           }]
   		}
 ```
 
