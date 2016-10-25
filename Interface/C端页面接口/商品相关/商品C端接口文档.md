@@ -4,9 +4,11 @@
 
 
 
-1	接口名：/recommendList.do  推荐列表
+1	接口名：goods/recommendList.do  推荐列表
 
 ```
+method : get
+入参 ： 无
 出参 ： status: {
     	code: 1001,  //所有的成功都是1001
     	msg: "成功"
@@ -39,9 +41,10 @@
   		}
 ```
 
-2	接口名：/getAlcoholType.do	酒水列表
+2	接口名：goods/getAlcoholType.do	酒水列表
 
 ```
+method : get
 入参 ：107 - 酒水对应的编号	page - 当前页码	pageSize - 显示数量
 出参：status: {
     	code: 1001,  //所有的成功都是1001
@@ -60,9 +63,10 @@
   	}
 ```
 
-3	接口名：/getSnacksType.do	零食列表
+3	接口名：goods/getSnacksType.do	零食列表
 
 ```
+  method : get
   入参 ：106 - 零食对应的编号		page	pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -81,9 +85,10 @@
   	}
 ```
 
-4	接口名：/getSugarType.do	糖巧列表
+4	接口名：goods/getSugarType.do	糖巧列表
 
 ```
+  method : get
   入参 ：103 - 糖巧对应的编号		page 	pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -102,9 +107,10 @@
   	}
 ```
 
-5	接口名：/getGoodsList.do		//推荐商品列表
+5	接口名：goods/getGoodsList.do		//推荐商品列表
 
 ```
+  method : get
   入参 ：page - 当前页码	pageSize - 每页显示商品的数量
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -120,9 +126,10 @@
   		}]
 ```
 
-6	接口名：/getTeaType.do	茶饮列表
+6	接口名：goods/getTeaType.do	茶饮列表
 
 ```
+  method : get
   入参 ：101 - 对应茶饮编号	page - 当前页码	 pageSize - 页码显示的数量
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -141,9 +148,10 @@
   		}
 ```
 
-7	接口名：/getFreshType.do  生鲜列表
+7	接口名：goods/getFreshType.do  生鲜列表
 
 ```
+  method : get
   入参 ：108 - 生鲜对应的编号		page	pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -162,9 +170,10 @@
   		}
 ```
 
-8	接口名：/getTablewareType.do 餐具列表
+8	接口名：goods/getTablewareType.do 餐具列表
 
 ```
+  method :  get
   入参 ：105 - 餐具对应编号		page		pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -183,9 +192,10 @@
   		}
 ```
 
-9	接口名：/getFastFoodType.do  速食列表
+9	接口名：goods/getFastFoodType.do  速食列表
 
 ```
+  method : get
   入参 ：104 - 速食对应编号		page	pageSize
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -204,9 +214,10 @@
   		}
 ```
 
-10	接口名：/getSpecialTheme.do  专题接口
+10	接口名：goods/getSpecialTheme.do  专题接口
 
 ```
+  method : get
   入参 ：无
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -225,9 +236,10 @@
   		}
 ```
 
-11	接口名：/getBannerDetails.do  banner详情接口
+11	接口名：goods/getBannerDetails.do  banner详情接口
 
 ```
+  method : get
   入参 ：bannerId
   出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -248,9 +260,10 @@
   补充 ： 后续活动页banner接口待定
 ```
 
-12 	接口名：/getSpecialDetails.do	专题详情接口
+12 	接口名：goods/getSpecialDetails.do	专题详情接口
 
 ```
+	method : get
 	入参 ： specialId
 	出参 ： status: {
     	code: 1001,  //所有的成功都是1001
@@ -272,9 +285,10 @@
 	
 ```
 
-13   接口名 ：/getGoodsDetails.do	商品详情接口
+13   接口名 ：goods/getGoodsDetails.do	商品详情接口
 
 ```
+	method : get
 	入参 ：goodsId		//商品编号
 	出参 ：status: {
     	code: 1001,  //所有的成功都是1001
@@ -293,4 +307,59 @@
                     detailImg : "image/89932.png,image/9789234.png",	// 商品详情图
         	}
   		}
+```
+14	获取商品规格属性
+
+```
+接口名		goods/queryGoodsStandard.do	获取商品规格
+method : get
+response :
+{
+  status: {
+    code: 1001,  //所有的成功都是1001
+    msg: "添加成功！"
+  },
+  data: {
+        goodsStandard : [
+          {"key":"name" ,"name":"品名"},
+          {"key":"brand" , "name":"品牌"},
+          {"key":"productPlace" , "name":"产地"},
+          {"key":"standard" , "name":"规格"},
+          {"key":"netContents" , "name":"净含量"},
+          {"key":"shelfLife" , "name":"保质期"},
+          {"key":"storageMethod" , "name":"存储方式"},
+          {"key":"ingredientList" , "name":"配料表"},
+          {"key":"isSugary" , "name":"是否含糖"},
+          {"key":"isOrganic" , "name":"是否有机"},
+          {"key":"isImported" , "name":"是否进口"},
+          {"key":"isBoxPacked" , "name":"是否盒装"},
+          {"key":"packageComponent" , "name":"套餐分量"},
+          {"key":"taste" , "name":"口味"},
+          {"key":"facility" , "name":"功能"},
+          {"key":"unsuitable" , "name":"不适宜人群"},
+          {"key":"suitable" , "name":"适宜人群"},
+          {"key":"productForm" , "name":"产品剂型"},
+          {"key":"foodAdditives" , "name":"食品添加剂"},
+          {"key":"setCycle" , "name":"套餐周期"},
+          {"key":"factoryName" , "name":"厂名"},
+          {"key":"factorySite" , "name":"厂址"},
+          {"key":"productStandardNum" , "name":"产品标准号"},
+          {"key":"freshStoreTemp" , "name":"生鲜储存温度"},
+          {"key":"proof" , "name":"酒精度数"},
+          {"key":"degree" , "name":"度数"},
+          {"key":"adaptiveScene" , "name":"适用场景"},
+          {"key":"packingMethod" , "name":"包装方式"},
+          {"key":"packingType" , "name":"包装种类"},
+          {"key":"wineStyle" , "name":"葡萄酒种类"},
+          {"key":"suitSpecification" , "name":"套装规格"},
+          {"key":"decanteDuration" , "name":"醒酒时间"},
+          {"key":"particularYear" , "name":"年份"},
+          {"key":"smell" , "name":"香味"},
+          {"key":"colourSort" , "name":"颜色分类"},
+          {"key":"styleType" , "name":"风格类型"},
+          {"key":"size" , "name":"尺寸"},
+          {"key":"specialty" , "name":"特产品种"},
+         ]
+  }
+}
 ```
