@@ -1,8 +1,8 @@
 create table `goods_base` (
 	`id` bigint(20) unsigned not null auto_increment comment '商品Id --商品唯一标识',
 	`title` varchar(20) not null default '' comment '商品名称 --对应后台商品标题',
-	`sub_title` varchar(30) not null default '' comment '商品标题 --对应后台商品副标题',
-	`des` varchar(160) not null default '' comment '悦选小编说',
+	`sub_title` varchar(60) not null default '' comment '商品标题 --对应后台商品副标题',
+	`des` varchar(225) not null default '' comment '悦选小编说',
 	`shop_price` int(11) unsigned not null default '0' comment '商品售价',
 	`origin_price` int(11) unsigned not null default '0' comment '商品原价',
 	`cost` int(11) unsigned not null default '0' comment '商品成本价',
@@ -15,6 +15,7 @@ create table `goods_base` (
 	`catagory3` int(11) unsigned not null default '0' comment '三级类目 ',
 	`catagory4` int(11) unsigned not null default '0' comment '四级类目 ',
 	`shop_id` bigint(20) unsigned not null default '0' comment '商户Id 暂无',
+	`app_id` bigint(20) unsigned not null default '0' comment 'platform',
 	`created` bigint(20) unsigned not null default '0',
 	`updated` bigint(20) unsigned not null default '0',
  	`is_deleted` tinyint(3) unsigned not null default '0' comment '是否删除 0:未删除 1:已删除',
@@ -22,4 +23,4 @@ create table `goods_base` (
 	key `idx_title_saleNum_updated` (`title` , `sale_num` ,`updated`),
   key `idx_catagory2_catagory3_catagory4` (`catagory2` , `catagory3` , `catagory4`),
 	key `idx_catalog3_catalog4` (`catagory3` , `catagory4`	)
-)engine=innodb default charset = utf8mb4 comment '新商品表'
+)engine=innodb default charset = utf8mb4 comment '新商品表' auto_increment = 100000

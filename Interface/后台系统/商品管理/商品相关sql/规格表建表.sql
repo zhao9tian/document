@@ -24,7 +24,7 @@ CREATE TABLE `goods_standard` (
   `factory_name` varchar(20) NOT NULL DEFAULT '' COMMENT '厂名 （中文）',
   `factory_site` varchar(20) NOT NULL DEFAULT '' COMMENT '厂址（中文、数字）',
   `product_standard_num` varchar(20) NOT NULL DEFAULT '' COMMENT '产品标准号（数字）',
-  `fresh_store_temp` varchar(100) NOT NULL DEFAULT '' COMMENT '生鲜储存温度（数字，单位：℃）',
+  `fresh_store_temp` varchar(20) NOT NULL DEFAULT '' COMMENT '生鲜储存温度（数字，单位：℃）',
   `proof` varchar(20) NOT NULL DEFAULT '' COMMENT '酒精度数',
 	`degree` varchar(20) NOT NULL DEFAULT '' COMMENT '度数（数字，单位：%vol）',
   `adaptive_scene` varchar(20) NOT NULL DEFAULT '' COMMENT '适用场景（中文）',
