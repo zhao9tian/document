@@ -1,5 +1,4 @@
 
-
 **商品接口文档**
 
 
@@ -251,7 +250,7 @@ method : get
   		data : {
      	 	 	bannerInfoImg : "image/123456.png", // banner详情图
       			bannerDesc : "从小打大作为小卖部的常驻会员..." //描述
-      			goodsRecomment : [{		//商品推荐
+      			goodsRecommend : [{		//商品推荐
         			goodsId : '123', // 商品编号
         			goodsName : '饼干', //商品名称
         			goodsDesc : "好吃",		//商品详细描述
