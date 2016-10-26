@@ -1,10 +1,10 @@
 CREATE TABLE `goods_standard` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `goods_id` bigint(11) unsigned NOT NULL COMMENT '商品id',
+	`goods_id` bigint(11) unsigned NOT NULL COMMENT '商品id',
   `name` varchar(20) NOT NULL DEFAULT '' COMMENT '品名（中文、英文）',
   `brand` varchar(20) NOT NULL DEFAULT '' COMMENT '品牌（中文、英文）',
   `product_place` varchar(20) NOT NULL DEFAULT '' COMMENT '产地（中文）',
-  `goods_standard` varchar(20) NOT NULL DEFAULT '' COMMENT '规格',
+	`goods_standard` varchar(20) NOT NULL DEFAULT '' COMMENT '规格',
   `net_contents` varchar(20) NOT NULL DEFAULT '' COMMENT '净含量（数字＋中英文文字自定义，单位：ml、g、kg)',
   `shelf_life` varchar(20) NOT NULL DEFAULT '' COMMENT '保质期(数字 单位：天、月、年）',
   `storage_method` varchar(20) NOT NULL DEFAULT '' COMMENT '储藏方式（中文）',
