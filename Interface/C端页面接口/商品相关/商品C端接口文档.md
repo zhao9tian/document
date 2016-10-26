@@ -1,4 +1,3 @@
-
 **商品接口文档**
 
 
@@ -274,7 +273,7 @@ method : get
   		data : {
       			specialInfoImg : "image/1234.png", //专题详情图片
       			specialDesc : "常常未了早上多睡会，只能赶时间....", //专题描述
-     	 		goodsList : [{		//商品推荐
+     	 		goodsRecommend : [{		//商品推荐
         			goodsId : '123',  // 商品编号
         			goodsName : '饼干',  //商品名称
         			goodsImg : 'image/778899.png',  // 商品图片地址
