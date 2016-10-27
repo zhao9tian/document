@@ -1,6 +1,6 @@
 CREATE TABLE `goods_standard` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-	`goods_id` bigint(11) unsigned NOT NULL COMMENT '商品id',
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+	`goods_id` bigint(20) unsigned NOT NULL COMMENT '商品id',
   `name` varchar(20) NOT NULL DEFAULT '' COMMENT '品名（中文、英文）',
   `brand` varchar(20) NOT NULL DEFAULT '' COMMENT '品牌（中文、英文）',
   `product_place` varchar(20) NOT NULL DEFAULT '' COMMENT '产地（中文）',
@@ -9,10 +9,10 @@ CREATE TABLE `goods_standard` (
   `shelf_life` varchar(20) NOT NULL DEFAULT '' COMMENT '保质期(数字 单位：天、月、年）',
   `storage_method` varchar(20) NOT NULL DEFAULT '' COMMENT '储藏方式（中文）',
   `ingredient_list` varchar(20) NOT NULL DEFAULT '' COMMENT '配料表（中文）',
-  `is_sugary` varchar(5) unsigned NOT NULL DEFAULT '0' COMMENT '是否含糖   1: 是 2:否',
-  `is_organic` varchar(5) unsigned NOT NULL DEFAULT '0' COMMENT '是否有机  1: 是 2:否',
-  `is_imported` varchar(5) unsigned NOT NULL DEFAULT '0' COMMENT '是否进口  1: 是 2:否',
-  `is_box_packed` varchar(5) unsigned NOT NULL DEFAULT '0' COMMENT '是否盒装  1: 是 2:否',
+  `is_sugary` varchar(5)  NOT NULL DEFAULT '' COMMENT '是否含糖    是 否',
+  `is_organic` varchar(5)  NOT NULL DEFAULT '' COMMENT '是否有机   是 否',
+  `is_imported` varchar(5)  NOT NULL DEFAULT '' COMMENT '是否进口   是 否',
+  `is_box_packed` varchar(5)  NOT NULL DEFAULT '' COMMENT '是否盒装   是 否',
   `package_component` varchar(20) NOT NULL DEFAULT '' COMMENT '套餐份量（数字，单位：人份）',
   `taste` varchar(20) NOT NULL DEFAULT '' COMMENT '口味（中文）',
   `facility` varchar(20) NOT NULL DEFAULT '' COMMENT '功能（中文）',
@@ -39,6 +39,7 @@ CREATE TABLE `goods_standard` (
   `style_type` varchar(20) NOT NULL DEFAULT '' COMMENT '风格类型中文）',
   `size` varchar(20) NOT NULL DEFAULT '' COMMENT '尺寸（数字＋中英文文字自定义，例如43cm x 78cm）',
 	`specialty` varchar(20) NOT NULL DEFAULT '' COMMENT '特产品种（中文）',
+  `other` varchar(20) NOT NULL DEFAULT '' COMMENT '其他',
   PRIMARY KEY (`id`),
   KEY `idx_goodsId` (`goods_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='商品规格';

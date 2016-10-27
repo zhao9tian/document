@@ -1,7 +1,7 @@
 create table `goods_base` (
 	`id` bigint(20) unsigned not null auto_increment comment '商品Id --商品唯一标识',
-	`title` varchar(20) not null default '' comment '商品名称 --对应后台商品标题',
-	`sub_title` varchar(60) not null default '' comment '商品标题 --对应后台商品副标题',
+	`title` varchar(20) not null default '' comment '商品标题',
+	`sub_title` varchar(60) not null default '' comment '商品副标题 ',
 	`des` varchar(225) not null default '' comment '悦选小编说',
 	`shop_price` int(11) unsigned not null default '0' comment '商品售价',
 	`origin_price` int(11) unsigned not null default '0' comment '商品原价',
