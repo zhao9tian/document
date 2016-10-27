@@ -40,7 +40,7 @@ method : get
   		}
 ```
 
-2	接口名：goods/getAlcoholType.do	酒水列表
+2	接口名：goods/getCategory.do	酒水列表
 
 ```
 method : get
@@ -50,7 +50,7 @@ method : get
     	msg: "成功"
   		},
   		data: {
-         	alcoholImg : "image/2342342.png",
+         	img : "image/2342342.png",
          	goodsList : [{
         		goodsId : '123',  // 商品编号
         		goodsName : '饼干',  //商品名称
