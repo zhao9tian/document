@@ -44,7 +44,7 @@ method : get
 
 ```
 method : get
-入参 ：107 - 酒水对应的编号	page - 当前页码	pageSize - 显示数量
+入参 ：categoryKey : 107 - 酒水对应的编号	page - 当前页码	pageSize - 显示数量
 出参：status: {
     	code: 1001,  //所有的成功都是1001
     	msg: "成功"
