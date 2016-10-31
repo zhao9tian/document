@@ -13,8 +13,8 @@ method : get
   		},
   		data : {
           bannerList ：[{					// banner列表
-             bannerId : 345343,		//编号
-             bannerImg : "image/2342342.png",	// banner图
+             themeId : 345343,		//编号
+             img : "image/2342342.png",	// banner图
              url : "https://www.freshfun365.com"	//点击banner图跳转的地址
           }],
           selectionList ：[{				// 精选列表
