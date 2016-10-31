@@ -33,8 +33,8 @@ json
                     },
         "data":{ 
         		bannerSort : [
-        			{themeId:12 , img:""},
-        			{themeId:13 , img:"" },
+        			{themeId:12 , img:"" , url:""},
+        			{themeId:13 , img:"" , url :""},
         			...
         		] 
         }
@@ -51,10 +51,10 @@ json
 ##### 参数 
 
 ```
-{
+ {
   bannerSort : [
-        			{themeId:12 , img:"" },
-        			{themeId:13 , img:"" },
+        			{themeId:12 , img:"" , url : ""},
+        			{themeId:13 , img:"" , url :"" },
         			...
         		] 
 }
