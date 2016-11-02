@@ -161,8 +161,8 @@ method : get
                     description : "下午茶时间，一杯英式伯爵红茶"		//悦选小编说
                     shopMoney : 28.00,  	// 商品实际销售价格
                     marketMoney : 42.00,  		//参考价格
-                    bannerImgList : 'image/778899.png,image/23423.png',  // 商品banner图
-                    detailImgList : "image/89932.png,image/9789234.png",	// 商品详情图
+                    bannerImgList : '[image/778899.png,image/23423.png]',  // 商品banner图
+                    detailImgList : '[image/89932.png,image/9789234.png]',	// 商品详情图
         	}
   		}
 ```
