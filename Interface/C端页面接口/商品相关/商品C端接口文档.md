@@ -36,7 +36,15 @@ method : get
         			shopMoney : 28.00,  // 商品实际销售价格
         			marketMoney : 42.00,  //参考价格
       			}]
-           }]
+           }],
+           goodsSort ：[{				// 商品排序列表
+             	goodsId : '123',  // 商品编号
+        		goodsName : '少女心桃红起泡酒',  //商品名称
+        		goodsImg : 'image/778899.png',  // 商品图片地址
+        		goodsDesc : '给自己一个浪漫的起泡酒',	//商品描述
+        		shopMoney : 28.00,  // 商品实际销售价格
+        		marketMoney : 42.00,  //参考价格
+          }],
   		}
 ```
 
