@@ -69,6 +69,21 @@ method : get
         		marketMoney : 42.00,  //参考价格
      	 }]
   	}
+  	
+3   接口名：goods/getGoodsList.do   更多商品
+    method : get
+    入参：page pageSize
+    出参：status: {
+    	code: 1001,  //所有的成功都是1001
+    	msg: "成功"
+  		},
+  		data : [{
+        		    goodsId : '123',  // 商品编号
+        			goodsName : '饼干',  //商品名称
+        			goodsImg : 'image/778899.png',  // 商品图片地址
+        			shopMoney : 28.00,  // 商品实际销售价格
+        			marketMoney : 42.00,  //参考价格
+      			}]
 ```
 
 10	接口名：goods/getSpecialTheme.do  专题接口
