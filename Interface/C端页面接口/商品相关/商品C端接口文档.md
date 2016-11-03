@@ -46,6 +46,14 @@ method : get
         		shopMoney : 28.00,  // 商品实际销售价格
         		marketMoney : 42.00,  //参考价格
           }],
+          limitGoodsList : [{       //限时购商品
+                goodsId : '123',    //商品编号
+                goodsImg : 'image/778899.png',      //商品图片
+                shopMoney   : 22.00,        //销售价
+                marketMoney :   42.00,       //参考价
+                startTime : 242342,         //距离开始时间
+                endTime : 3242332,          //距离结束时间
+          }]
   		}
 ```
 
@@ -153,6 +161,7 @@ method : get
         			goodsDesc : "好吃",			//商品详细描述
         			shopMoney : 28.00,  // 商品实际销售价格
         			marketMoney : 42.00,  //参考价格
+        			isDiscount : 0         //是否为折扣商品
       			}]
   		}
 	
@@ -179,6 +188,7 @@ method : get
                     marketMoney : 42.00,  		//参考价格
                     bannerImgList : '[image/778899.png,image/23423.png]',  // 商品banner图
                     detailImgList : '[image/89932.png,image/9789234.png]',	// 商品详情图
+                    isDiscount : 0         //是否为折扣商品
         	}
   		}
 ```
