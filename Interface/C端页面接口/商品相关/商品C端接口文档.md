@@ -158,7 +158,7 @@ method : get
       				goodsId : '123',  // 商品编号
                     goodsName : '饼干',  //商品名称
                     goodsDesc : "充满童趣好吃不胖的手工烘培曲奇饼干..."		//商品描述
-                    description : "下午茶时间，一杯英式伯爵红茶"		//悦选小编说
+                    descriptionStr : "下午茶时间，一杯英式伯爵红茶"		//悦选小编说
                     shopMoney : 28.00,  	// 商品实际销售价格
                     marketMoney : 42.00,  		//参考价格
                     bannerImgList : '[image/778899.png,image/23423.png]',  // 商品banner图
