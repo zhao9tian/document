@@ -13,9 +13,10 @@ method : get
   		},
   		data : {
           bannerList ：[{					// banner列表
-             themeId : 345343,		//编号
+             themeId : 345343,		//专题编号  为活动页时默认值为0
              img : "image/2342342.png",	// banner图
-             url : "https://www.freshfun365.com"	//点击banner图跳转的地址
+             url : "https://www.freshfun365.com",	//点击banner图跳转的地址
+             isCampaign : 0     //是否为活动页 0:专题页  10:活动页
           }],
           selectionList ：[{				// 精选列表
              	goodsId : '123',  // 商品编号
