@@ -153,7 +153,7 @@ method : get
     	msg: "成功"
   		},
   		data : {
-  			specification : {"key":"value","brand","品牌"},		//商品规格
+  			specification : [{"key":"brand","name":"品牌"}],		//商品规格
       		goods : { 
       				goodsId : '123',  // 商品编号
                     goodsName : '饼干',  //商品名称
