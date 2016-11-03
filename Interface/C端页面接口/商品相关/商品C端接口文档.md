@@ -143,7 +143,7 @@ method : get
 	
 ```
 
-13   接口名 ：goods/getGoodsDetails.do	商品详情接口
+13   接口名 ：goods/findGoodsDetails.do	商品详情接口
 
 ```
 	method : get
@@ -153,7 +153,7 @@ method : get
     	msg: "成功"
   		},
   		data : {
-  			specification : [{"key":"brand","name":"品牌"}],		//商品规格
+  			specification : [{"key":"品牌","name":"爱马仕"}],		//商品规格
       		goods : { 
       				goodsId : '123',  // 商品编号
                     goodsName : '饼干',  //商品名称
@@ -166,58 +166,4 @@ method : get
         	}
   		}
 ```
-14	获取商品规格属性
-
-```
-接口名		goods/queryGoodsStandard.do	获取商品规格
-method : get
-response :
-{
-  status: {
-    code: 1001,  //所有的成功都是1001
-    msg: "添加成功！"
-  },
-  data: {
-        goodsStandard : [
-          {"key":"name" ,"name":"品名"},
-          {"key":"brand" , "name":"品牌"},
-          {"key":"productPlace" , "name":"产地"},
-          {"key":"standard" , "name":"规格"},
-          {"key":"netContents" , "name":"净含量"},
-          {"key":"shelfLife" , "name":"保质期"},
-          {"key":"storageMethod" , "name":"存储方式"},
-          {"key":"ingredientList" , "name":"配料表"},
-          {"key":"isSugary" , "name":"是否含糖"},
-          {"key":"isOrganic" , "name":"是否有机"},
-          {"key":"isImported" , "name":"是否进口"},
-          {"key":"isBoxPacked" , "name":"是否盒装"},
-          {"key":"packageComponent" , "name":"套餐分量"},
-          {"key":"taste" , "name":"口味"},
-          {"key":"facility" , "name":"功能"},
-          {"key":"unsuitable" , "name":"不适宜人群"},
-          {"key":"suitable" , "name":"适宜人群"},
-          {"key":"productForm" , "name":"产品剂型"},
-          {"key":"foodAdditives" , "name":"食品添加剂"},
-          {"key":"setCycle" , "name":"套餐周期"},
-          {"key":"factoryName" , "name":"厂名"},
-          {"key":"factorySite" , "name":"厂址"},
-          {"key":"productStandardNum" , "name":"产品标准号"},
-          {"key":"freshStoreTemp" , "name":"生鲜储存温度"},
-          {"key":"proof" , "name":"酒精度数"},
-          {"key":"degree" , "name":"度数"},
-          {"key":"adaptiveScene" , "name":"适用场景"},
-          {"key":"packingMethod" , "name":"包装方式"},
-          {"key":"packingType" , "name":"包装种类"},
-          {"key":"wineStyle" , "name":"葡萄酒种类"},
-          {"key":"suitSpecification" , "name":"套装规格"},
-          {"key":"decanteDuration" , "name":"醒酒时间"},
-          {"key":"particularYear" , "name":"年份"},
-          {"key":"smell" , "name":"香味"},
-          {"key":"colourSort" , "name":"颜色分类"},
-          {"key":"styleType" , "name":"风格类型"},
-          {"key":"size" , "name":"尺寸"},
-          {"key":"specialty" , "name":"特产品种"},
-         ]
-  }
-}
 ```
