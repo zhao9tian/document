@@ -1,6 +1,17 @@
 -- 数据迁移
 
 
+类目测试
+
+update goods_base set catagory2 = 101 where id > 55 and id < 80  -- 22
+update goods_base set catagory2 = 102 where id > 81 and id < 111 -- 25
+update goods_base set catagory2 = 103 where id >= 111 and id < 151 -- 25
+
+
+
+------------------------------------
+
+
 TRUNCATE goods_theme
 
 TRUNCATE goods_base
@@ -62,23 +73,35 @@ insert into goods_base (id , title , sub_title , des , shop_price , origin_price
 	select g.id , substring_index((select gd.des from goods_detail gd where gd.goods_id = g.id) ,'@`',1),
 	substring_index((select substring_index((select gd.des as desccc from goods_detail gd where gd.goods_id = g.id),'@`', -2)),'@`',1),
 	substring_index((select gd.des from goods_detail gd where gd.goods_id = g.id) ,'@`',-1) ,
-	shop_price , market_price , goods_img , is_on_sale , gmt_create , gmt_modified from goods g
+	shop_price , market_price , CONCAT("http://pic1.freshfun365.com",goods_img) , is_on_sale , gmt_create , gmt_modified from goods g
 
 -- 3.goods_detail 迁移到 goods_img  257
 insert into goods_img (goods_id , detail_img , carousel_img) select goods_id , detailImgPath , carouselImgPath from goods_detail gd 
--- 4 插入special_mall数据
-insert into goods_theme ( theme_des , img , is_forbidden , goods_id_list ,created , updated) 
-select  mall_info_content , mall_img , if(is_deleted=0 , 1 , 0 ), 
+
+-- 3.1 goods_standard 
+insert into goods_standard(goods_id) select id from goods
+
+-- 4 插入special_mall数据  -- 检查专题表里面是否有商品Id列表为空的,加上[]
+insert into goods_theme (theme_name , theme_des , img , is_forbidden , goods_id_list ,created , updated) 
+select  mall_des , mall_info_content , CONCAT("http://pic1.freshfun365.com",mall_img) , if(is_deleted=0 , 1 , 0 ), 
 (select concat('[',GROUP_CONCAT(goods_id) ,']') from smid_vs_gid where mall_id = sm.id) ,
  gmt_create , gmt_modified from special_mall sm 
 
 -- 5 插入special_theme数据
-insert into goods_theme ( theme_des , img , is_forbidden ,goods_id_list , created , updated) 
-select  theme_info_content , theme_img , if(is_deleted=0 , 1 , 0 ) , 
-if((select concat('[',GROUP_CONCAT(goods_id) ,']') from stid_vs_gid where theme_id = st.id) is null , '',
+insert into goods_theme (theme_name , theme_des , img , is_forbidden ,goods_id_list , created , updated) 
+select  theme_des , theme_info_content , CONCAT("http://pic1.freshfun365.com",theme_img) , if(is_deleted=0 , 1 , 0 ) , 
+if((select concat('[',GROUP_CONCAT(goods_id) ,']') from stid_vs_gid where theme_id = st.id) is null , '[]',
 (select concat('[',GROUP_CONCAT(goods_id) ,']') from stid_vs_gid where theme_id = st.id)) ,
 gmt_create , gmt_modified from special_theme st
 
+
+select concat('[',GROUP_CONCAT(goods_id) ,']') from stid_vs_gid where theme_id = 12
+
+-- 6.插入规格信息和分类图片信息
+insert into goods_property(`key`,`value`) values("goodsStandard" , "[{\"key\":\"name\",\"name\":\"品名\"},{\"key\":\"brand\",\"name\":\"品牌\"},{\"key\":\"productPlace\",\"name\":\"产地\"},{\"key\":\"goodsStandard\",\"name\":\"规格\"},{\"key\":\"netContents\",\"name\":\"净含量\"},{\"key\":\"shelfLife\",\"name\":\"保质期\"},{\"key\":\"storageMethod\",\"name\":\"储藏方式\"},{\"key\":\"ingredientList\",\"name\":\"配料表\"},{\"key\":\"isSugary\",\"name\":\"是否含糖\"},{\"key\":\"isOrganic\",\"name\":\"是否有机\"},{\"key\":\"isImported\",\"name\":\"是否进口\"},{\"key\":\"isBoxPacked\",\"name\":\"是否礼盒装\"},{\"key\":\"packageComponent\",\"name\":\"套餐分量\"},{\"key\":\"taste\",\"name\":\"口味\"},{\"key\":\"facility\",\"name\":\"功能\"},{\"key\":\"unsuitable\",\"name\":\"不适宜人群\"},{\"key\":\"suitable\",\"name\":\"适宜人群\"},{\"key\":\"productForm\",\"name\":\"产品剂型\"},{\"key\":\"foodAdditives\",\"name\":\"食品添加剂\"},{\"key\":\"setCycle\",\"name\":\"套餐周期\"},{\"key\":\"factoryName\",\"name\":\"厂名\"},{\"key\":\"factorySite\",\"name\":\"厂址\"},{\"key\":\"productStandardNum\",\"name\":\"产品标准号\"},{\"key\":\"freshStoreTemp\",\"name\":\"生鲜储存温度\"},{\"key\":\"proof\",\"name\":\"酒精度数\"},{\"key\":\"degree\",\"name\":\"度数\"},{\"key\":\"adaptiveScene\",\"name\":\"适用场景\"},{\"key\":\"packingMethod\",\"name\":\"包装方式\"},{\"key\":\"packingType\",\"name\":\"包装种类\"},{\"key\":\"wineStyle\",\"name\":\"葡萄酒种类\"},{\"key\":\"suitSpecification\",\"name\":\"套装规格\"},{\"key\":\"decanteDuration\",\"name\":\"醒酒时间\"},{\"key\":\"particularYear\",\"name\":\"年份\"},{\"key\":\"smell\",\"name\":\"香味\"},{\"key\":\"colourSort\",\"name\":\"颜色分类\"},{\"key\":\"styleType\",\"name\":\"风格类型\"},{\"key\":\"size\",\"name\":\"尺寸\"},{\"key\":\"specialty\",\"name\":\"特产品种\"},{\"key\":\"other\",\"name\":\"其他\"}]")
+
+
+insert into goods_property(`key`,`value`) values("typeImg","[{\"typeNo\":\"101\",\"img\":\"http://pic1.freshfun365.com/image/2016113/cy_banner.png\"},{\"typeNo\":\"102\",\"img\":\"http://pic1.freshfun365.com/image/2016113/my_banner.png\"},{\"typeNo\":\"103\",\"img\":\"http://pic1.freshfun365.com/image/2016113/tq_banner.png\"},{\"typeNo\":\"104\",\"img\":\"http://pic1.freshfun365.com/image/2016113/ss_banner.png\"},{\"typeNo\":\"105\",\"img\":\"http://pic1.freshfun365.com/image/2016113/cj_banner.png\"},{\"typeNo\":\"106\",\"img\":\"http://pic1.freshfun365.com/image/2016113/ls_banner.png\"},{\"typeNo\":\"107\",\"img\":\"http://pic1.freshfun365.com/image/2016113/js_banner.png\"},{\"typeNo\":\"108\",\"img\":\"http://pic1.freshfun365.com/image/2016113/sx_banner.png\"}]")
 
 
 
