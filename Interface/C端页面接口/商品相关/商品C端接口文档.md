@@ -188,7 +188,9 @@ method : get
                     marketMoney : 42.00,  		//参考价格
                     bannerImgList : '[image/778899.png,image/23423.png]',  // 商品banner图
                     detailImgList : '[image/89932.png,image/9789234.png]',	// 商品详情图
-                    isDiscount : 0         //是否为折扣商品
+                    isDiscount : 0   5    10  //是否为折扣商品 0 正常商品    5限时打折商品and未开始     10限时打折商品and进行中
+                 startTime: 28883   时间戳/1000
+                    endTime: 88888   时间戳/1000
         	}
   		}
 ```
