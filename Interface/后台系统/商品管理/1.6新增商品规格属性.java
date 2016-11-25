@@ -1,0 +1,1 @@
+{"key":"agtron","name":"烘焙程度"},{"key":"material","name":"材质"},{"key":"coffee_type","name":"咖啡种类"},{"key":"technics","name":"工艺"},{"key":"series","name":"系列"},{"key":"pattern","name":"图案"},{"key":"coffee_cooked_degree","name":"咖啡豆生熟程度"},{"key":"color","name":"颜色"},{"key":"mouthfeel","name":"口感"},{"key":"applicable_object","name":"适用对象"},{"key":"bowl_diameter","name":"碗口直径"}
