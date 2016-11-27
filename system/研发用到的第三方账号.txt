@@ -99,4 +99,3 @@ admin Freshfun123
 dubbox monitor数据库
 120.26.8.237
 root FreshFun~2016
-root FreshFun~2016
