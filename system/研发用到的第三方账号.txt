@@ -75,7 +75,6 @@ ptp         ssh root@120.26.8.237        Freshfun123 终端管理员密码：503
          
 线下数据库
 主 118.178.59.147
-
 从 118.178.84.29
 账号：root
 密码：FreshFun~2016
@@ -96,3 +95,8 @@ git地址 ：http://git.fresh.fun/
 
 jenkins账户密码
 admin Freshfun123
+
+dubbox monitor数据库
+120.26.8.237
+root FreshFun~2016
+root FreshFun~2016
