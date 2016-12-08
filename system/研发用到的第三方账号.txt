@@ -69,6 +69,7 @@ test_db     ssh root@118.178.59.147      Freshfun123
 pre         ssh root@118.178.84.29       FreshFun~2016
 online1     ssh root@118.178.87.165      Freshfun123	
 ptp         ssh root@120.26.8.237        Freshfun123 终端管理员密码：503427
+service     ssh root@116.62.42.22        Freshfun123
 
 数据库地址：
 线上数据库 rm-bp1m3fn0kvm8fjzkbo.mysql.rds.aliyuncs.com   端口3306     
