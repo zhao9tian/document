@@ -102,3 +102,8 @@ admin Freshfun123
 dubbox monitor数据库
 120.26.8.237
 root FreshFun~2016
+
+maven私服
+地址：http://121.43.234.124:8081/
+账户：admin
+密码：Freshfun123
