@@ -10,7 +10,7 @@
 
 
 
-#### 1.接口名 : queryIndexLimitGoods.do
+#### 1.接口名 : 重用recommendList.do  
 
 ##### desc : 查询首页限量购商品
 
@@ -26,12 +26,8 @@
 
 ```
 {
-  status : {
-    code : 1001,
-    msg : "请求成功"
-  }，
-  data : {
-    sortlimitGoods : [
+	
+  	indexLimitGoods : [
       {
         goodsId : 56 ,								商品Id
         title :	"我是限量购商品",  					商品标题
@@ -39,6 +35,7 @@
         limitLeave : 500,							限量购商品剩余库存
         limitPrice : "20.00"						限量购价格
         originPrice : "18.00"						原价
+        goodsImg :"http:pic......"					商品图片
       },
       {},{},{}
     ]
@@ -75,10 +72,13 @@
       {
         goodsId : 56 ,								商品Id
         title :	"我是限量购商品",  					商品标题
+        subTitle : "我是副标题"						副标题
+        goodsImg : "http://...."					商品图片
         limitStock : 5000,							限量购商品总库存
         limitLeave : 500,							限量购商品剩余库存
         limitPrice : "20.00"						限量购价格
         originPrice : "18.00"						原价
+        
       },
       {},{}....
     ]
