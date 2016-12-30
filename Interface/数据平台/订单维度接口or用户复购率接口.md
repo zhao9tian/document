@@ -1,5 +1,15 @@
-
 ## 订单纬度：order/QueryOrderLatitude.do
+
+##### 条件：
+
+~~~
+{
+  startTime : 10293423		//开始时间
+  endTime : 1309023		//结束时间
+}
+~~~
+
+##### 返回值： 
 
 
 ```
@@ -37,7 +47,19 @@
 }
 ```
 
-## 用户复购率：order/QueryUserRepeatPurchase.do
+## 用户复购率：order/QueryUserRebuyRate.do
+
+##### 条件：
+
+~~~
+{
+  startTime : 1232092		//开始时间
+  endTime : 14012031		//结束时间
+  rebuyRate : 7	or 30		//7表示7天复购率30表示30天复购率
+}
+~~~
+
+##### 返回值：
 
 ```
 {
