@@ -1,5 +1,7 @@
 ## 订单纬度：order/QueryOrderLatitude.do
 
+##### 请求方式：	get
+
 ##### 条件：
 
 ~~~
@@ -48,6 +50,8 @@
 ```
 
 ## 用户复购率：order/QueryUserRebuyRate.do
+
+##### 请求方式：	get
 
 ##### 条件：
 
