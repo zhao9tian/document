@@ -66,7 +66,7 @@ ssh root@orange.meiguoyouxian.com   /   Meiguoyouxian2015
 
 新买服务器   
 test_db     ssh root@118.178.59.147      Freshfun123           
-pre         ssh root@118.178.84.29       FreshFun~2016
+pre         ssh root@118.178.84.29       Freshfun123
 online1     ssh root@118.178.87.165      Freshfun123	
 ptp         ssh root@120.26.8.237        Freshfun123 终端管理员密码：503427
 service     ssh root@116.62.42.22        Freshfun123
